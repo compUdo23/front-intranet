@@ -1,5 +1,5 @@
 <?php 
-
+session_start(); 
 // include_once("seguridad/segsistemas.php");
 // include_once("../intranet/confSeg.php");
 
