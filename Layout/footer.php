@@ -1,6 +1,6 @@
 <!-- start footer section -->
                     <p class="pt-6 text-center dark:text-white-dark ltr:sm:text-left rtl:sm:text-right">
-                        © <span id="footer-year">2023</span>. UDO All rights reserved.
+                        © <span id="footer-year">2023</span>. Aplicación Desarrollada por la Dirección de Computación del RECTORADO - UNIVERSIDAD DE ORIENTE
                     </p>
                     <!-- end footer section -->
                 </div>

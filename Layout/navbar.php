@@ -103,8 +103,8 @@
                                         />
                                     </svg>
                             </span>
-                            <span class="text-base" x-text="`${dataUser?.NOMBRE}`"></span>
-                            <!-- <template x-show="dataUser.NOMBRE !== undefined">
+                            <span class="text-base" x-text="`${$store.app.user?.NOMBRE}`"></span>
+                            <!-- <template x-show="$store.app.user.NOMBRE !== undefined">
                             </template> -->
                         </span>
                     </a>
@@ -138,10 +138,10 @@
                                 </div>
                                 <div class="ltr:pl-4 rtl:pr-4">
                                     <h6>
-                                        <span x-text="`${dataUser?.NOMBRE}`"></span>
+                                        <span x-text="`${$store.app.user?.NOMBRE}`"></span>
                                     </h6>
                                     <h6>
-                                        <span x-text="`${dataUser?.APELLIDO}`"></span>
+                                        <span x-text="`${$store.app.user?.APELLIDO}`"></span>
                                     </h6>
                                     <!-- <a
                                         class="text-black/60 hover:text-primary dark:text-dark-light/60 dark:hover:text-white"
@@ -152,7 +152,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="users-profile.html" class="dark:hover:text-white" @click="toggle">
+                            <a href="./index.php?item=actualizacionDatos" class="dark:hover:text-white" @click="toggle">
                                 <svg
                                     class="h-4.5 w-4.5 ltr:mr-2 rtl:ml-2"
                                     width="18"
@@ -206,7 +206,7 @@
         </div>
 
         <!-- horizontal menu -->
-        <ul
+        <!-- <ul
             class="horizontal-menu hidden border-t border-[#ebedf2] bg-white py-1.5 px-6 font-semibold text-black rtl:space-x-reverse dark:border-[#191e3a] dark:bg-[#0e1726] dark:text-white-dark lg:space-x-1.5 xl:space-x-8"
         >
             <li class="menu nav-item relative">
@@ -985,6 +985,6 @@
                     </li>
                 </ul>
             </li>
-        </ul>
+        </ul> -->
     </div>
 </header>

@@ -74,7 +74,7 @@
 
                 <li class="nav-item">
                     <ul>
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a href="./index.php?item=informacion" class="group <?php if($item == 'informacion') echo 'active' ?>" >
                                 <div class="flex items-center">
                                     <svg
@@ -100,7 +100,7 @@
                                     <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Información</span>
                                 </div>
                             </a>
-                        </li> -->
+                        </li>
                         <li class="nav-item">
                             <a href="./index.php?item=carga-familiar" class="group <?php if($item == 'carga-familiar') echo 'active' ?>">
                                 <div class="flex items-center">
@@ -135,7 +135,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./index.php?item=fp020" class="group <?php if($item == 'fp020') echo 'active' ?>">
+                            <a href="apps-todolist.html" class="group">
                                 <div class="flex items-center">
                                     <svg
                                         class="group-hover:!text-primary"
@@ -162,7 +162,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./index.php?item=impuesto" class="group <?php if($item == 'impuesto') echo 'active' ?>">
+                            <a href="apps-notes.html" class="group">
                                 <div class="flex items-center">
                                     <svg
                                         class="group-hover:!text-primary"

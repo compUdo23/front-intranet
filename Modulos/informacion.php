@@ -1,6 +1,6 @@
 
 <!-- start main content section -->
-<div x-data="sales">
+<div>
     <ul class="flex space-x-2 rtl:space-x-reverse">
         <li>
             <a href="javascript:;" class="text-primary hover:underline">Dashboard</a>
@@ -24,7 +24,7 @@
                         </div>
                         <div class="group relative flex items-center py-1.5">
                             <div class="flex-1">APELLIDO:</div>
-                            <div class="text-xs text-white-dark ltr:ml-auto rtl:mr-auto dark:text-gray-500">TATA LETTERI</div>
+                            <div class="text-xs text-white-dark ltr:ml-auto rtl:mr-auto dark:text-gray-500">esta es otra pagina</div>
                         </div>
                         <div class="group relative flex items-center py-1.5">
                             <div class="flex-1">NOMBRE:</div>

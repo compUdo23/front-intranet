@@ -8,19 +8,21 @@
         animation: '', // animate__fadeIn, animate__fadeInDown, animate__fadeInUp, animate__fadeInLeft, animate__fadeInRight, animate__slideInDown, animate__slideInLeft, animate__slideInRight, animate__zoomIn
         navbar: 'navbar-sticky', // navbar-sticky, navbar-floating, navbar-static
         semidark: false,
-        loading: false
+        loading: false,
+        user: null
     };
     window.addEventListener('load', function () {
         // screen loader
-        const screen_loader = document.getElementsByClassName('screen_loader');
-        if (screen_loader?.length) {
-            screen_loader[0].classList.add('animate__fadeOut');
-            setTimeout(() => {
-                document.body.removeChild(screen_loader[0]);
-            }, 200);
-        }
+        // const screen_loader = document.getElementsByClassName('screen_loader');
+        // if (screen_loader?.length) {
+        //     screen_loader[0].classList.add('animate__fadeOut');
+        //     setTimeout(() => {
+        //         document.body.removeChild(screen_loader[0]);
+        //     }, 200);
+        // }
 
         // set rtl layout
+        Alpine.store('app').getUser();
         Alpine.store('app').setRTLLayout();
     });
 
@@ -161,6 +163,25 @@
 
             setRTLLayout() {
                 document.querySelector('html').setAttribute('dir', this.rtlClass || $themeConfig.rtlClass);
+            },
+            user: Alpine.$persist($themeConfig.user),
+            async getUser() {
+                const screen_loader = document.getElementsByClassName('screen_loader');
+                if (screen_loader?.length) {
+                    screen_loader[0].classList.add('animate__fadeOut');
+                }
+                try {
+                    const data = await fetch('http://10.5.0.98/intranet/front-intranet/API/api_persona.php')
+                    const info = await data.json()
+                    this.user = info[0] ?? null
+                    console.log({info})
+                } catch (error) {
+                    console.error(error)
+                } finally {
+                    if (screen_loader?.length) {
+                        document.body.removeChild(screen_loader[0]);
+                    }
+                }
             },
 
             // animation
